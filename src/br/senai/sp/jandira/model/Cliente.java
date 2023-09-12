@@ -11,10 +11,12 @@ public class Cliente {
     String nome, email, endereco;
     long telefone, cpf, rg;
 
+    double dinheiroDisponivel;
+
     /** Instancia o Scanner */
     Scanner teclado = new Scanner(System.in);
 
-    public void CadastrarCliente(){
+    public void cadastrarCliente(){
 
         System.out.println("---------  Cadastro Cliente  ---------");
         System.out.println("Qual é o nome do Cliente: ");
@@ -30,14 +32,13 @@ public class Cliente {
         email = teclado.nextLine();
         System.out.println("Informe o endereço: ");
         endereco = teclado.nextLine();
+        System.out.println("Informe quanto você tem: [R$] ");
+        dinheiroDisponivel = teclado.nextDouble();
         System.out.println("--------  Cadastro Finalizado  ---------");
         System.out.println("----------------------------------------");
 
-        teclado.close();
 
     }
-
-
 
 
 }

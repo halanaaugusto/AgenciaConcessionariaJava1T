@@ -1,6 +1,5 @@
 package br.senai.sp.jandira.model;
 
-import javax.swing.*;
 import java.util.Scanner;
 
 public class Veiculo {
@@ -11,7 +10,7 @@ public class Veiculo {
     /** Instancia Scanner */
     Scanner teclado = new Scanner(System.in);
 
-    public void CadastarVeiculo(){
+    public void cadastarVeiculo(){
 
         System.out.println("---------  Cadastro Veiculo  ---------");
         System.out.println("Informe a Marca: ");
@@ -29,9 +28,6 @@ public class Veiculo {
         teclado.nextLine();
         System.out.println("--------  Cadastro Finalizado  ---------");
         System.out.println("----------------------------------------");
-
-        teclado.close();
-
 
     }
 
