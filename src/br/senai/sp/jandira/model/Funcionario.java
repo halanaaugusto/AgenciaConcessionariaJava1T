@@ -37,4 +37,13 @@ public class Funcionario {
 
     }
 
+
+    public void receberComissao(Veiculo objVeiculo){
+
+        comissao += objVeiculo.preco * 0.10;
+        System.out.println("A comissão foi de " + comissao);
+
+    }
+
+
 }

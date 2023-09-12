@@ -44,7 +44,14 @@ public class Menu {
                     break;
 
                 case 4:
-                    System.out.println("Feature in Development");
+
+                    boolean validaVenda = objVenda.realizarVenda(objVeiculo, objCliente);
+
+                    if (validaVenda){
+                        objCliente.dinheiroDisponivel -= objVeiculo.preco;
+                        System.out.println("O saldo do cliente é: " + objCliente.dinheiroDisponivel);
+                    }
+
                     break;
 
                 case 5:
@@ -53,7 +60,7 @@ public class Menu {
 
             }
 
-            if (escolhaUsuario < 0 || escolhaUsuario > 5){
+            if (escolhaUsuario < 1 || escolhaUsuario > 5){
                 System.out.println("Escolha uma opção Válida !");
             }
 
