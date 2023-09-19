@@ -1,5 +1,7 @@
 package br.senai.sp.jandira.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Cliente {
@@ -15,6 +17,8 @@ public class Cliente {
 
     /** Instancia o Scanner */
     Scanner teclado = new Scanner(System.in);
+
+    List<Cliente> listClientes = new ArrayList<>();
 
     public void cadastrarCliente(){
 
@@ -38,6 +42,16 @@ public class Cliente {
         System.out.println("----------------------------------------");
 
 
+    }
+
+    public void adicionarCliente(Cliente objCliente){
+        listClientes.add(objCliente);
+    }
+
+    public void listarCliente(){
+        for (Cliente objCliente : listClientes){
+            System.out.println(objCliente.nome);
+        }
     }
 
 
