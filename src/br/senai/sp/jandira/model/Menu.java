@@ -29,7 +29,10 @@ public class Menu {
             System.out.println("3- Cadastar Funcionario");
             System.out.println("4- Realizar Venda");
             System.out.println("5- Listar Veiculos");
-            System.out.println("6- Sair");
+            System.out.println("6- Listar Clientes");
+            System.out.println("7- Listar Funcionarios");
+            System.out.println("8- Pesquisar Veiculos");
+            System.out.println("9- Sair");
             System.out.println("-----------------------------");
             System.out.println("-----------------------------");
 
@@ -72,12 +75,38 @@ public class Menu {
                     break;
 
                 case 6:
+                    refListCliente.listarCliente();
+                    break;
+
+                case 7:
+                    refListFuncionario.listarFuncionario();
+                    break;
+
+                case 8:
+                    System.out.println("Informe o modelo do veiculo: ");
+                    String veiculoPesquisado = teclado.nextLine();
+                    boolean validaVeiculo = false;
+
+                    if (veiculoPesquisado != null && veiculoPesquisado != "") {
+                        validaVeiculo = refListVeiculo.pesquisarVeiculo(veiculoPesquisado);
+                    }
+
+                    if (validaVeiculo){
+                        System.out.println("Veiculo Disponivel para Compra !!");
+                    } else {
+                        System.out.println("Veiculo Indisponivel !!");
+                    }
+
+
+                    break;
+
+                case 9:
                     continuar = false;
                     break;
 
             }
 
-            if (escolhaUsuario < 1 || escolhaUsuario > 5){
+            if (escolhaUsuario < 1 || escolhaUsuario > 9){
                 System.out.println("Escolha uma opção Válida !");
             }
 

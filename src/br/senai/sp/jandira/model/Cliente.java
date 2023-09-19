@@ -38,6 +38,7 @@ public class Cliente {
         endereco = teclado.nextLine();
         System.out.println("Informe quanto você tem: [R$] ");
         dinheiroDisponivel = teclado.nextDouble();
+        teclado.nextLine();
         System.out.println("--------  Cadastro Finalizado  ---------");
         System.out.println("----------------------------------------");
 
