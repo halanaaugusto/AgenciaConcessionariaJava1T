@@ -14,7 +14,7 @@ public class Veiculo {
 
     List<Veiculo> listVeiculos = new ArrayList<>();
 
-    public void cadastarVeiculo(){
+    public void cadastrarVeiculo(){
 
         System.out.println("---------  Cadastro Veiculo  ---------");
         System.out.println("Informe a Marca: ");
@@ -54,4 +54,12 @@ public class Veiculo {
         return false;
     }
 
+    public Veiculo localizarVeiculoCompra(String modeloVeiculo){
+        for (Veiculo veiculo : listVeiculos){
+            if (veiculo.modelo.equalsIgnoreCase(modeloVeiculo)){
+                return veiculo;
+            }
+        }
+        return null;
+    }
 }
